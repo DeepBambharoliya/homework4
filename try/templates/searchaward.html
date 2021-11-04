@@ -1,0 +1,23 @@
+<!--inherits the layout template-->
+{% extends "layout.html"%}
+<!--this content is unique to home.html-->
+{% block content %}
+    <h1>Search Award by Year</h1>
+    <div>
+        <form method="get" action="{{url_for('awardbyyearanswer')}}">
+            {{form.hidden_tag()}}
+            <fieldset class="form-group">
+                <div>
+                    {{form.awardyear.label(class="form-control-label")}}
+                    {{form.awardyear(class="form-control form-control-lg")}}
+                </div> 
+                
+            </fieldset>
+            <div>
+                {{form.submit(class="btn btn-outline-info")}}
+            </div>
+           <h1></h1>
+            
+        </form> 
+    </div>
+{% endblock content%}

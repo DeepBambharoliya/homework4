@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+            h1 {text-align: center;}
+            h2  {color: white;
+                background-color: yellow;
+                text-align: center;
+                padding: 20px;}
+        </style>
+    </head>
+    <body>
+    <h1>Home Page</h1>
+    <form>
+    <div>
+        <h2><a class="ml-2" href="{{url_for('add')}}">add laureate</a></h2>
+    </div>
+    <div>
+        <h2><a class="ml-2" href="{{url_for('search')}}">search laureate by name</a></h2>
+    </div>
+    <div>
+        <h2><a class="ml-2" href="{{url_for('searchawardbyyear')}}">search award by year</a></h2>
+    </div>
+    </form>
+</body>
+    </html>

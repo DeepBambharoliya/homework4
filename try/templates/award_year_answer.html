@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Award by Year
+        </title>
+        <style>
+            table, th, td {
+              border: 3px solid black;
+              border-collapse: collapse;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Awards for year</h1>
+    <table>
+
+        {% for t in result %}
+       
+            <tr>
+            {% for i in t %}
+           
+                <td><h1>{{ i }}</h1></td>
+                
+            {% endfor %}
+        
+            </tr>
+            
+        {% endfor %}
+         </table>
+        <!-- {% for t in result %}
+         
+           {{t[0]}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{t[1]}}
+         
+         <br><br>
+        {%endfor%}
+         -->
+       
+</body>       
+</html>

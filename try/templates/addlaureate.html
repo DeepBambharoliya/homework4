@@ -1,0 +1,72 @@
+<!--inherits the layout template-->
+{% extends "layout.html"%}
+<!--this content is unique to home.html-->
+{% block content %}
+    <h1>Add Laureate Page</h1>
+    <div>
+        <form method="post" action="">
+            {{form.hidden_tag()}}
+            <fieldset class="form-group">
+                <div>
+                    {{form.id.label(class="form-control-label")}}
+                    {{form.id(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.knownname.label(class="form-control-label")}}
+                    {{form.knownname(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.givenname.label(class="form-control-label")}}
+                    {{form.givenname(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.familyname.label(class="form-control-label")}}
+                    {{form.familyname(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.fullname.label(class="form-control-label")}}
+                    {{form.fullname(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.gender.label(class="form-control-label")}}
+                    {{form.gender(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.birthdate.label(class="form-control-label")}}
+                    {{form.birthdate(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.city.label(class="form-control-label")}}
+                    {{form.city(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.country.label(class="form-control-label")}}
+                    {{form.country(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.citynow.label(class="form-control-label")}}
+                    {{form.citynow(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.countrynow.label(class="form-control-label")}}
+                    {{form.countrynow(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.continent.label(class="form-control-label")}}
+                    {{form.continent(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.locationstring.label(class="form-control-label")}}
+                    {{form.locationstring(class="form-control form-control-lg")}}
+                </div> 
+                <div>
+                    {{form.prizestatus.label(class="form-control-label")}}
+                    {{form.prizestatus(class="form-control form-control-lg")}}
+                </div> 
+            </fieldset>
+            <div>
+                {{form.submit(class="btn btn-outline-info")}}
+            </div>
+        </form> 
+    </div>
+{% endblock content%}

@@ -26,6 +26,7 @@ app.config['SECRET_KEY'] = 'abcd'
 def home():
     return render_template('home.html',title = 'custom title')
 ####################################################################################################################
+#about function returns ansewr for search by laureate name
 @app.route("/about",methods=['POST','GET'])
 def about():
     knownname = request.args.get('knownname')
@@ -33,12 +34,12 @@ def about():
     laureates = db.laureates.find_one({"knownName":{"en":knownname,"se":knownname}})
     Table = []
    
-    for key, value in laureates.items():    # or .items() in Python 3
+    for key, value in laureates.items():    
         temp = []
-        temp.extend([key,value])  #Note that this will change depending on the structure of your dictionary
+        temp.extend([key,value]) 
         Table.append(temp)
     return render_template('about.html',result=Table)
-#jsonfile=json_util.dumps(laureates)
+
 ###################################################################################################################
 @app.route("/add",methods=['get','post'])
 def add():
